@@ -39,8 +39,25 @@ Wrangler 会自动完成以下工作：
 ### 1. 创建 KV 命名空间
 
 ```bash
-npx wrangler kv:namespace create DB
+npx wrangler kv namespace create DB
 ```
+$ npx wrangler kv namespace create DB
+
+ ⛅️ wrangler 4.98.0
+───────────────────
+Resource location: remote
+
+🌀 Creating namespace with title "DB"
+✨ Success!
+To access your new KV Namespace in your Worker, add the following snippet to your configuration file:
+{
+  "kv_namespaces": [
+    {
+      "binding": "DB",
+      "id": "d7d1051771e748c8a96906d07cdba25e"
+    }
+  ]
+}
 
 命令行会输出类似 `{"binding": "DB", "id": "456xyz..."}` 的内容，将其替换到 `wrangler.jsonc` 中的 `kv_namespaces` 部分。
 

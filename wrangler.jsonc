@@ -10,7 +10,7 @@
   "kv_namespaces": [
     {
       "binding": "DB",           // 代码里调用 KV 的变量名
-      "id": "xxxxx_placeholder_xxxxx" // 本地开发时可以先随便填
+      "id": "d7d1051771e748c8a96906d07cdba25e" // 本地开发时可以先随便填
     }
   ]
 }
