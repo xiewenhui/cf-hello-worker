@@ -1,0 +1,16 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "hello-worker",
+  "main": "src/index.ts",        // 后端入口
+  "compatibility_date": "2026-05-26",
+  "assets": {
+    "directory": "./public",     // 前端静态资源目录
+    "binding": "ASSETS"          // 固定绑定名
+  },
+  "kv_namespaces": [
+    {
+      "binding": "DB",           // 代码里调用 KV 的变量名
+      "id": "xxxxx_placeholder_xxxxx" // 本地开发时可以先随便填
+    }
+  ]
+}

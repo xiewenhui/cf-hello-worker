@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>Workers + Assets demo</title>
+    <style>
+        body { font-family: sans-serif; text-align: center; padding-top: 50px; background: #f4f7f6; }
+        .card { background: white; padding: 30px; display: inline-block; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+        h1 { color: #f63; }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h1>欢迎来到边缘计算世界！</h1>
+        <p>这是一个 Workers + Assets 托管的页面。</p>
+        <h2 id="counter">正在加载访问次数...</h2>
+    </div>
+
+    <script>
+        // 请求后端的 API 接口
+        fetch('/api/visit')
+            .then(res => res.json())
+            .then(data => {
+                document.getElementById('counter').innerText = `📊 本站已被访问了 ${data.count} 次`;
+            });
+    </script>
+</body>
+</html>
